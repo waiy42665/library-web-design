@@ -1,0 +1,423 @@
+*{
+	padding: 0;
+	margin: 0;
+
+	box-sizing: border-box;
+}
+
+body{
+	background: #333;
+	font-family: sans-serif;
+}
+
+#logo{
+	width: 70px;
+	height: 70px;
+
+	position: fixed;
+	right: 10px;
+	top: 5px;
+
+	display: block;
+}
+
+#logo img{
+	width: 100%;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+#dark{
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	cursor: pointer;
+}
+
+.fa-cloud-moon{
+	color: #fff;
+	font-size: 30px;
+	padding: 10px;
+}
+
+.darkmode{
+	background: #fff;
+}
+
+.black{
+	color: #000 !important;
+}
+
+#backtotop{
+	width: 50px;
+	height: 50px;
+	background: green;
+	border-radius: 50%;
+
+	text-align: center;
+	line-height: 50px;
+
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+
+	display: none;
+}
+
+#backtotop a{
+	color: #fff;
+	font-size: 2rem;
+}
+
+/*Start Header*/
+header{
+	height: 60vh;
+	
+
+	/*display: grid;*/
+	/*place-items: center;*/
+	position: relative;
+}
+
+.header-box{
+	width: 80%;
+	text-align: center;
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+
+	transform: translate(-50%,-50%);
+}
+
+.welcomes{
+	margin-bottom: 70px;
+}
+
+.welcomes h3{
+	font-size: 60px;
+	font-weight: bold;
+}
+
+.menus{
+	margin-top: 50px;
+}
+
+.menus a{
+	display: inline-block;
+	max-width: 200px;
+	max-height: 200px;
+	width: 200px;
+	height: 200px;
+	line-height: 230px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 25px;
+	font-weight: bold;
+	font-variant: small-caps;
+
+	/*padding: 50px;*/
+	margin: 10px;
+
+	position: relative;
+
+	z-index: 10;
+}
+
+.menus a::before{
+	content: "";
+	width: calc(100% - 30px);
+	height: calc(100% - 30px);
+	border: 5px solid orange;
+
+	position: absolute;
+	left: 15px;
+	top: 15px;
+
+	transform: rotate(45deg);
+
+	/*animation: orange 10s infinite linear;*/
+
+	z-index: -1;
+}
+
+.menus a::after{
+	content: "";
+	width: 100%;
+	height: 100%;
+	/*border: 5px solid red;*/
+
+	position: absolute;
+	left: 0px;
+	top: 0px;
+
+	transform: rotate(45deg);
+
+	transition: all .3s linear;
+
+	z-index: 1;
+}
+
+.menus a:hover::after{
+	border: 5px solid green;
+	animation: orange 10s infinite linear;
+}
+
+@keyframes orange{
+	from{
+		transform: rotate(0);
+	}
+
+	to{
+		transform: rotate(1turn);
+	}
+}
+
+.menus span{
+	position: relative;
+}
+
+.fa-dot-circle,
+.fa-universal-access,
+.fa-book,
+.fa-atlas,
+.fa-users{
+	font-size: 40px;
+	position: absolute;
+	left: 50%;
+	top: 20%;
+
+	transform: translate(-50%);
+}
+
+@media (max-width: 768px){
+
+	.welcomes{
+		margin-top: 80px;
+		margin-bottom: 0px;
+	}
+
+	.welcomes h3{
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	.menus{
+		margin-top: 0px;
+	}
+
+	.menus a{
+		display: inline-block;
+		max-width: 150px;
+		max-height: 150px;
+		width: 120px;
+		height: 120px;
+		line-height: 120px;
+		color: #fff;
+		text-decoration: none;
+		font-size: 16px;
+		font-weight: bold;
+
+		/*padding: 50px;*/
+		margin: 10px;
+
+		position: relative;
+
+		z-index: 10;
+	}
+
+	.fa-dot-circle,
+	.fa-universal-access,
+	.fa-book,
+	.fa-atlas,
+	.fa-users{
+		display: none;
+	}
+
+}
+/*End Header*/
+
+/*Start counter section*/
+.counters{
+	/* height: 60vh; */
+	background: linear-gradient(rgba(0, 0, 0, .5),rgba(0, 0, 0, .5)), url(./../assets/img/lib.png);
+	color: #fff;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+
+	display: flex;
+	justify-content: center;
+}
+
+.counter-items{
+	width: 100%;
+	background: rgba(226, 245, 218, .5);
+	box-shadow: 5px 0 0px #f4f4f4;
+	padding: 20px 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.counter-items .fas{
+	color: orange;
+	font-size: 3.5rem;
+}
+
+.counter-items span:nth-of-type(2){
+	font-variant: small-caps;
+}
+
+.quotes blockquote{
+	font-size: 25px;
+	font-variant: small-caps;
+	letter-spacing: 1px;
+	border-bottom: 10px solid orangered;
+	padding: 5px;
+}
+
+/*End counter section*/
+
+/*Start Librarian Section*/
+.Librarians{
+ 	background: rgba(226, 245, 218, .5);
+
+	overflow: hidden;
+}
+
+.Librarians .titles{
+	color: #fff;
+	font-size: 60px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.Librarians .images{
+	padding: 20px 0;
+}
+
+
+.Librarians .images div{
+	background: steelblue;
+	border-radius: 10px;
+	outline: 2px solid #fff;
+	padding: 10px;
+	margin: auto;
+}
+
+.Librarians .images img{
+	max-width: 300px;
+	max-height: 300px;
+	width: 250px;
+	height: 250px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.images div p:nth-of-type(1){
+	color: #fff;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.images div a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.lib-lefts{
+	animation: libleft 2s linear;
+}
+
+.lib-rights{
+	animation: libright 2s linear;
+}
+
+.lib-centers{
+	animation: libcenter 2s linear;
+}
+
+@keyframes libleft{
+	from{
+		transform: translate(-100%);
+		opacity: 0;
+	}
+
+	to{
+		transform: translate(0);
+		opacity: 1;
+	}
+}
+
+@keyframes libcenter{
+	from{
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	to{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes libright{
+	from{
+		transform: translate(100%);
+		opacity: 0;
+	}
+
+	to{
+		transform: translate(0);
+		opacity: 1;
+	}
+}
+
+@media (max-width: 768px){
+	.Librarians .images div{
+		width: 80%;
+		background: steelblue;
+		border-radius: 10px;
+		outline: 2px solid #fff;
+		padding: 10px;
+		margin: auto;
+		margin-bottom: 5px;
+	}
+}
+
+/*End Librarian Section*/
+
+/*Start About Us Section*/
+.abouts{
+
+}
+
+.abouts .titles{
+	color: #fff;
+	font-size: 60px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.abouts .about-texts{
+	color: #fff;
+	font-size: 25px;
+	font-variant: small-caps;
+	text-align: justify;
+}
+
+@media (max-width: 768px){
+	.abouts .about-texts{
+		color: #fff;
+		font-size: 25px;
+		text-align: justify;
+		letter-spacing: none;
+	}
+}
+/*End About Us Section*/

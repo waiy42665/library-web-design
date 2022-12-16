@@ -1,0 +1,163 @@
+body{
+	background: #333;
+	margin: 0;
+	padding: 0;
+}
+
+.logo1,.logo2{
+	width: 70px;
+	height: 70px;
+
+	position: fixed;
+
+	top: 5px;
+
+	display: block;
+
+	z-index: 10;
+}
+
+.logo1 img,.logo2 img{
+	width: 100%;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.logo1{
+	left: 10px;
+}
+
+.logo2{
+	right: 10px;
+}
+
+.menu-lists{
+	position: fixed;
+	left: 0;
+	top: 20%;
+}
+
+.menu-lists a{
+	display: block;
+	width: 100px;
+	height: 50px;
+	background: green;
+	color: #fff;
+	font-size: 20px;
+	text-decoration: none;
+	line-height: 50px;
+	border-radius: 10px;
+	padding-left: 5px;
+	margin: 5px 0;
+
+	position: absolute;
+	left: -70px;
+
+	transition: all .3s ease-in;
+}
+
+.menu-lists a:nth-of-type(1){
+	top: 0;
+
+	background: #fff;
+	color: #000;
+}
+
+.menu-lists a:nth-of-type(2){
+	top: 60px;
+
+	background: red;
+}
+
+.menu-lists a:nth-of-type(3){
+	top: 120px;	
+
+	background: rgba(242, 245, 66, .8);
+}
+
+.menu-lists a:nth-of-type(4){
+	top: 180px;
+
+	background: green;
+}
+
+.menu-lists a:hover{
+	left: 0;
+}
+
+.fa-home,.fa-book,.fa-atlas,.fa-angle-up{
+	position: absolute;
+	right: 5px;
+	top: 50%;
+
+	transform: translateY(-50%);
+}
+
+
+/*Start Book Section*/
+.mm{
+	margin-top: 100px;
+}
+
+.contents{
+	background: #729d9e;
+	padding: 15px;
+	border-radius: 5px;
+	outline: 1px solid #fff;
+
+	display: flex;
+	justify-content: space-between;
+
+	position: relative;
+
+
+}
+
+.book-names{
+	color: #fff;
+	padding: 0 10px;
+}
+
+.book-names h4{
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.book-images{
+	padding: 0 10px;
+}
+
+img{
+	max-width: 150px;
+	max-height: 150px;
+}
+
+.read-btn{
+	background: green;
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.5rem;
+	font-weight: bold;
+	font-variant: small-caps;
+	padding: 15px 60px;
+	letter-spacing: 2px;
+
+	position: absolute;
+	left: 5%;
+	bottom: 0;
+
+	display: none;
+
+	transition: all .2s;
+}
+
+.read-btn:hover{
+	color: #fff;
+	opacity: .7;
+	letter-spacing: 3px;
+}
+
+.contents:hover .read-btn{
+	display: block;
+	transform: scale(1);
+}
